@@ -1,25 +1,25 @@
 number2word
 ===========
 
-Author: Lukasz Kosmaczewski
-twitter: lucosmo							 
-email: lukasz.kosmaczewski@gmail.com
+Author: Lukasz Kosmaczewski<br>
+twitter: lucosmo<br>							 
+email: lukasz.kosmaczewski@gmail.com<br><br><br>
 
-*******************DESCRIPTION**************************
+<b><i>DESCRIPTION</i></b>
 
 Script converts numbers into words e.g.:
 123 -> "one hundred twenty-three"			 	
 Script uses long-scale naming system		
 Max value to convert is 999 999 999 999 999 999
 
-*******************HOW TO USE IT?************************
-
+<b><i>HOW TO USE IT?</b></i>
+<br>
 Create php file in the same directory
-
+<br><br>
 Add below code in your php file:
-
-require_once("num2word.php");
-$s=new Num2Word("999");
-$s->go();
+<br><br>
+require_once("num2word.php");<br>
+$s=new Num2Word("999");<br>
+$s->go();<br>
 
 
