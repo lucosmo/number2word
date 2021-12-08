@@ -13,12 +13,25 @@
 
 
 class Num2Word{
+
+	/**
+	 * @var int $number stores number as integer
+	 */
 	private $number;
+	/**
+	 * @var int $length length of the number
+	 */
 	private $length;
+
 	private $digits=array("0"=>"zero","1"=>"one","2"=>"two","3"=>"three","4"=>"four","5"=>"five","6"=>"six","7"=>"seven","8"=>"eight","9"=>"nine");
 	private $digits1=array("0"=>"ten","1"=>"eleven","2"=>"twelve","3"=>"thirteen","4"=>"fourteen","5"=>"fifteen","6"=>"sixteen","7"=>"seventeen","8"=>"eighteen","9"=>"nineteen");
 	private $digits2=array("1"=>"ten","2"=>"twenty","3"=>"thirty","4"=>"forty","5"=>"fifty","6"=>"sixty","7"=>"seventy","8"=>"eighty","9"=>"ninety");
 	private $digits3=array(1=>"hundred",2=>"thousand",3=>"million", 4=>"milliard",5=>"billion", 6=>"billiard");
+
+	/**
+	 * @param string $num reference to string representing number
+	 * @return boolean
+	*/
 	private function checkNum(&$num)
 	{
 		$search=array(" ","\t","\n","\r","\0","\x0B");
