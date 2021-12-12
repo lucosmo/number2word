@@ -113,7 +113,11 @@ class Num2Word{
 		}
 		else die("Error: It isn't a number");
 	}
-	
+
+	/**
+	 * Runs whole application
+	 * @return string
+	*/
 	function go()
 	{
 		return $this->readNum($this->number);
