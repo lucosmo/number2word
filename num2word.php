@@ -41,9 +41,9 @@ class Num2Word{
 	}
 
 	/**
-	 * Converting 2-digit numbers
-	 * @param string $num reference to string representing number
-	 * @return boolean
+	 * Converts 2-digit numbers into word format
+	 * @param string $dblDig reference to string representing number
+	 * @return string
 	*/
 	private function readDouble($dblDig)
 	{
@@ -52,10 +52,13 @@ class Num2Word{
 		elseif($dblDig[1]==0) // check if it's round double digit number (10,20,30...)
 			return (string)$this->digits2[(string)$dblDig[0]];
 		else return (string)$this->digits2[(string)$dblDig[0]]."-".$this->digits[(string)$dblDig[1]]; //everything else about two digit numbers
-
 	}
 
-	/* converting 3-digit numbers (default)*/
+	/**
+	 * Converts 3-digit numbers into word format
+	 * @param string $triple reference to string representing number
+	 * @return string
+	*/
 	private function readTriple($triple)
 	{
 		$word="";
@@ -71,8 +74,12 @@ class Num2Word{
 		return $word;
 	}
 
-	/* whole number is divided here into max 3-digits parts*/
-	/* first part consists of 1-3 digits */
+	/**
+	 * Divides whole number into up to 3-digits parts,
+	 * first part consists of 1-3 digits
+	 * @param string $num reference to string representing number
+	 * @return string
+	*/
 	private function readNum($num)
 	{
 		$word="";
@@ -94,7 +101,7 @@ class Num2Word{
 			else $word=$this->readTriple($pieces[0]); //it's just one part to work on it - 3-digit number less or equal 999
 		}
 		else $word=$this->readTriple($num);
-		echo $word;
+		return $word;
 	}
 
 	function __construct($num)
@@ -106,6 +113,7 @@ class Num2Word{
 		}
 		else die("Error: It isn't a number");
 	}
+	
 	function go()
 	{
 		return $this->readNum($this->number);
