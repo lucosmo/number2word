@@ -123,3 +123,9 @@ class Num2Word{
 		return $this->readNum($this->number);
 	}
 }
+if(2 == $argc){
+ $s = Num2Word($argv[1]);
+ return $s->readNum($s->number);
+}else{
+echo "wrong number of arguments";
+return 0;
