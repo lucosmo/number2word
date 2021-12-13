@@ -14,12 +14,8 @@ Max value to convert is 999 999 999 999 999 999
 
 <b><i>HOW TO USE IT?</b></i>
 <br>
-Create php file in the same directory
-<br><br>
-Add below code in your php file:
-<br><br>
-require_once("num2word.php");<br>
-$s=new Num2Word("999");<br>
-$s->go();<br>
+In command line type:<br>
+php num2word.php [number] <br>
+Where [number] is for example 123
 
 
