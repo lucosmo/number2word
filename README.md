@@ -7,7 +7,7 @@ email: lukasz.kosmaczewski@gmail.com<br><br><br>
 
 <b><i>DESCRIPTION</i></b>
 
-Script converts numbers into words e.g.:
+Script converts number into its words representation e.g.:
 123 -> "one hundred twenty-three"			 	
 Script uses long-scale naming system		
 Max value to convert is 999 999 999 999 999 999
