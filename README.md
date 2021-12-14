@@ -1,8 +1,7 @@
 number2word
 ===========
 
-Author: Lukasz Kosmaczewski<br>
-twitter: lucosmo<br>							 
+Author: Lukasz Kosmaczewski<br>						 
 email: lukasz.kosmaczewski@gmail.com<br><br><br>
 
 <b><i>DESCRIPTION</i></b>
