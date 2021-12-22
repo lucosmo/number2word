@@ -5,7 +5,7 @@
 *	email: lukasz.kosmaczewski@gmail.com
 *
 *
-* Script converts numbers (digits) into word representation e.g.:
+*       Script converts numbers (digits) into word representation e.g.:
 *	123 -> "one hundred twenty-three"
 *	Script uses long-scale naming system
 *	Max value to convert is 999 999 999 999 999 999
@@ -34,9 +34,9 @@ class Num2Word{
 	*/
 	private function checkNum(&$num)
 	{
-		$search=array(" ","\t","\n","\r","\0","\x0B");
-		$num=str_replace($search,"",$num); //search for white characters and remove them
-		if(strlen($num)>1 && $num[0]=="0") return false; //if number start from '0' return false
+		$search = array(" ","\t","\n","\r","\0","\x0B");
+		$num = str_replace($search,"",$num); //search for white characters and remove them
+		if(strlen($num) > 1 && $num[0] == "0") return false; //if number start from '0' return false
 		return ctype_digit($num);
 	}
 
@@ -47,9 +47,9 @@ class Num2Word{
 	*/
 	private function readDouble($dblDig)
 	{
-		if($dblDig[0]==1) // check if it's value bewteen 10 and 19
+		if($dblDig[0] == 1) // check if it's value bewteen 10 and 19
 			return (string)$this->digits1[(string)$dblDig[1]];
-		elseif($dblDig[1]==0) // check if it's round double digit number (10,20,30...)
+		elseif($dblDig[1] == 0) // check if it's round double digit number (10,20,30...)
 			return (string)$this->digits2[(string)$dblDig[0]];
 		else return (string)$this->digits2[(string)$dblDig[0]]."-".$this->digits[(string)$dblDig[1]]; //everything else about two digit numbers
 	}
@@ -61,15 +61,15 @@ class Num2Word{
 	*/
 	private function readTriple($triple)
 	{
-		$word="";
+		$word = "";
 		$subhpieces=strlen($triple);
-		if($subhpieces==3)
+		if(3 == $subhpieces)
 		{
 			$word=$this->digits[(string)$triple[0]]." hundred ".$this->readDouble(substr($triple,1,2));
 		}
-		elseif($subhpieces==2) $word=$this->readDouble($triple);
+		elseif(2 == $subhpieces) $word = $this->readDouble($triple);
 		else {
-		$word=$this->digits[(string)$triple];
+		    $word = $this->digits[(string)$triple];
 		}
 		return $word;
 	}
@@ -82,7 +82,7 @@ class Num2Word{
 	*/
 	private function readNum($num)
 	{
-		$word="";
+		$word = "";
 		if($this->length>3)
 		{
 			$extraDigits=$this->length%3;
@@ -90,17 +90,17 @@ class Num2Word{
 				$pieces=str_split($num,3);
 			else
 				$pieces=array_merge(array(substr($num,0,$extraDigits)), str_split(substr($num,$extraDigits),3));
-			$hpieces=count($pieces);
-			if($hpieces>1)
+			$hpieces = count($pieces);
+			if($hpieces > 1)
 			for($i=$hpieces;$i>0;$i--)  //variable $i lets choose name of number from digits3 array
 			{
-				if($i==1) $word.=$this->readTriple($pieces[$hpieces-$i]);
+				if(1 == $i) $word .= $this->readTriple($pieces[$hpieces-$i]);
 				else
-				$word.=$this->readTriple($pieces[$hpieces-$i])." ".$this->digits3[$i]." ";
+				$word .= $this->readTriple($pieces[$hpieces-$i])." ".$this->digits3[$i]." ";
 			}
-			else $word=$this->readTriple($pieces[0]); //it's just one part to work on it - 3-digit number less or equal 999
+			else $word = $this->readTriple($pieces[0]); //it's just one part to work on it - 3-digit number less or equal 999
 		}
-		else $word=$this->readTriple($num);
+		else $word = $this->readTriple($num);
 		return $word;
 	}
 
@@ -108,8 +108,8 @@ class Num2Word{
 	{
 		if($this->checkNum($num))
 		{
-			$this->number=$num;
-			$this->length=strlen($num);
+			$this->number = $num;
+			$this->length = strlen($num);
 		}
 		else die("Error: It isn't a number");
 	}
