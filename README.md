@@ -1,8 +1,5 @@
 ## number2word
 
-Author: Lukasz Kosmaczewski<br>						 
-email: lukasz.kosmaczewski@gmail.com<br><br><br>
-
 <b><i>DESCRIPTION</i></b>
 <br>
 Script converts number into its words representation e.g.:<br>
