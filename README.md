@@ -2,8 +2,9 @@
 
 <b><i>DESCRIPTION</i></b>
 <br>
-Script converts number into its words representation e.g.:<br>
-123 -> "one hundred twenty-three"<br>			 	
+Script converts number into its words representation e.g.:<br><br>
+Input: 123<br>
+Output: one hundred twenty-three<br><br>			 	
 Script uses long-scale naming system<br>		
 Max value to convert is 999 999 999 999 999 999<br><br>
 
