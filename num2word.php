@@ -1,10 +1,5 @@
 <?php
 /*
-*	Author: Lukasz Kosmaczewski
-*	twitter: lucosmo
-*	email: lukasz.kosmaczewski@gmail.com
-*
-*
 *       Script converts numbers (digits) into word representation e.g.:
 *	123 -> "one hundred twenty-three"
 *	Script uses long-scale naming system
