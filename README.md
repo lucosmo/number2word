@@ -1,6 +1,6 @@
 ## number2word
 
-<b><i>DESCRIPTION</i></b>
+### DESCRIPTION
 <br>
 Script converts number into its words representation e.g.:<br><br>
 Input: 123<br>
@@ -8,7 +8,7 @@ Output: one hundred twenty-three<br><br>
 Script uses long-scale naming system<br>		
 Max value to convert is 999 999 999 999 999 999<br><br>
 
-<b><i>HOW TO USE IT?</b></i>
+### HOW TO USE IT?
 <br>
 
 In command line type:<br>
