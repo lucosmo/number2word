@@ -1,8 +1,7 @@
 ## number2word
 
 ### DESCRIPTION
-<br>
-Script converts number into its words representation e.g.:<br><br>
+Script converts number into its words representation e.g.:
 Input: 
 ```
 123
@@ -11,7 +10,7 @@ Output:
 ```
 one hundred twenty-three
 ```			 	
-Script uses long-scale naming system<br>		
+Script uses long-scale naming system		
 Max value to convert is: 
 ```
 999 999 999 999 999 999
