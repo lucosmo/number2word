@@ -2,6 +2,7 @@
 
 ### DESCRIPTION
 Script converts number into its words representation e.g.:
+
 Input: 
 ```
 123
