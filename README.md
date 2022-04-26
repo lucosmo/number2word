@@ -1,6 +1,6 @@
 ## number2word
 
-### DESCRIPTION
+### Description
 Script converts number into its words representation e.g.:
 
 Input: 
@@ -17,12 +17,12 @@ Max value to convert is:
 999 999 999 999 999 999
 ```
 
-### HOW TO USE IT?
+### Instruction
 
 In command line type:
 ```
-php num2word.php [number]
+php num2word.php my_number
 ```
-Where [number] is for example 123
+Where my_number is for example 123
 
 
